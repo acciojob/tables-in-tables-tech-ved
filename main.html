@@ -7,8 +7,9 @@
     table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
-        padding: 8px;
+        padding: 6px;
     }
+
     .black-cell {
         background-color: black;
         color: white;
@@ -22,66 +23,68 @@
 <h2>Tables in Tables</h2>
 
 <!-- MAIN TABLE (TABLE 0) -->
-<table>
+<table style="width: 700px;">
     <tr>
-        <td>
-            <!-- TABLE 1 -->
-            <table>
+        <!-- LEFT TOP (Nested Table 2) -->
+        <td style="width: 50%; vertical-align: top;">
+            <table style="width:100%;">
                 <tr>
-                    <th colspan="2">Nested Table 1</th>
+                    <th colspan="2">Nested Table 2</th>
                 </tr>
                 <tr>
-                    <td>Row 1 Column 1</td>
-                    <td>Row 1 Column 2</td>
-                </tr>
-            </table>
-        </td>
-
-        <td>
-            <!-- TABLE 2 (THIS ONE CYPRESS CHECKS) -->
-            <table>
-                <tr>
-                    <th>Nested Table 2</th>
                     <th>Column 1</th>
                     <th>Column 2</th>
                 </tr>
                 <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>C</td>
+                    <td>abc</td>
+                    <td>def</td>
                 </tr>
             </table>
         </td>
-    </tr>
 
-    <tr>
-        <td>
-            <!-- TABLE 3 -->
-            <table>
+        <!-- RIGHT TOP (Nested Table 1) -->
+        <td style="width: 50%; vertical-align: top;">
+            <table style="width:100%;">
                 <tr>
-                    <th>Nested Table 3</th>
+                    <th>Nested Table 1</th>
                 </tr>
                 <tr>
                     <td>
                         <ul>
-                            <li>List item 1</li>
-                            <li>List item 2</li>
-                            <li>List item 3</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
                         </ul>
                     </td>
                 </tr>
             </table>
         </td>
+    </tr>
 
-        <td>
-            <!-- TABLE 4 -->
-            <table>
+    <!-- SECOND ROW -->
+    <tr>
+        <!-- BOTTOM LEFT (Nested Table 3) -->
+        <td style="vertical-align: top;">
+            <table style="width:100%;">
+                <tr>
+                    <th colspan="2">Nested Table 3</th>
+                </tr>
+                <tr>
+                    <td><a href="#">Nested Table</a></td>
+                    <td>Demo Continued</td>
+                </tr>
+            </table>
+        </td>
+
+        <!-- BOTTOM RIGHT (Nested Table 4) -->
+        <td style="vertical-align: top;">
+            <table style="width:100%;">
                 <tr>
                     <th colspan="2">Nested Table 4</th>
                 </tr>
                 <tr>
                     <td class="black-cell">HTML</td>
-                    <td>Some Text</td>
+                    <td></td>
                 </tr>
             </table>
         </td>
