@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nested HTML Tables</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
-        }
-        .black-cell {
-            background-color: black;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Nested HTML Tables</title>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+    .black-cell {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
 
 <h2>Tables in Tables</h2>
 
-<!-- MAIN TABLE -->
+<!-- MAIN TABLE (TABLE 0) -->
 <table>
     <tr>
         <td>
-            <!-- Nested Table 1 -->
+            <!-- TABLE 1 -->
             <table>
                 <tr>
                     <th colspan="2">Nested Table 1</th>
@@ -34,15 +34,11 @@
                     <td>Row 1 Column 1</td>
                     <td>Row 1 Column 2</td>
                 </tr>
-                <tr>
-                    <td>Row 2 Column 1</td>
-                    <td>Row 2 Column 2</td>
-                </tr>
             </table>
         </td>
 
         <td>
-            <!-- Nested Table 2 -->
+            <!-- TABLE 2 (THIS ONE CYPRESS CHECKS) -->
             <table>
                 <tr>
                     <th>Nested Table 2</th>
@@ -60,7 +56,7 @@
 
     <tr>
         <td>
-            <!-- Nested Table 3 with List -->
+            <!-- TABLE 3 -->
             <table>
                 <tr>
                     <th>Nested Table 3</th>
@@ -78,7 +74,7 @@
         </td>
 
         <td>
-            <!-- Nested Table 4 with black cell -->
+            <!-- TABLE 4 -->
             <table>
                 <tr>
                     <th colspan="2">Nested Table 4</th>
